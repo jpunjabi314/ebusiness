@@ -1,0 +1,22 @@
+{
+  "name": "ebusiness",
+  "version": "1.0.0",
+  "description": "For FBLA comp event",
+  "main": "index.html",
+  "scripts": {
+    "test": "Standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpunjabi314/ebusiness.git"
+  },
+  "keywords": [
+    "ebusiness"
+  ],
+  "author": "Jatin Punjabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpunjabi314/ebusiness/issues"
+  },
+  "homepage": "https://github.com/jpunjabi314/ebusiness#readme"
+}
