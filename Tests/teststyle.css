@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #e9e9e9;
+    padding: 20px;
+  }
+  
+  header img {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  .room {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .room img {
+    height: 200px;
+    margin-right: 20px;
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  
+  #reservation-form label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  #reservation-form input,
+  #reservation-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  #reservation-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #booking-confirmation {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: lightgreen;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }

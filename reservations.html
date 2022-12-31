@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Reservations - Fictional Hotel</title>
+  </head>
+  <body>
+    <div class="header">
+    <a href="index.html"> 
+        <img src="logo.png" alt="Fictional Hotel logo" class="logo" />
+    </a>
+      
+      <nav>
+        <a href="about.html">About Us</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="attractions.html">Local Attractions</a>
+        <a href="reservations.html" class="active">Reservations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="main-content">
+      <h1>Reservations</h1>
+      <p>Thank you for choosing the Fictional Hotel for your stay. To make a reservation, please complete the form below. Our team will review your request and get back to you as soon as possible to confirm your reservation.</p>
+      <form>
+        <label for="arrival-date">Arrival Date:</label><br />
+        <input type="date" id="arrival-date" name="arrival-date" required /><br />
+        <label for="departure-date">Departure Date:</label><br />
+        <input type="date" id="departure-date" name="departure-date" required /><br />
+        <label for="room-type">Room Type:</label><br />
+        <select id="room-type" name="room-type" required>
+          <option value="standard">Standard</option>
+          <option value="deluxe">Deluxe</option>
+          <option value="suite">Suite</option>
+        </select><br />
+        <label for="number-of-guests">Number of Guests:</label><br />
+        <input type="number" id="number-of-guests" name="number-of-guests" min="1" max="4" required /><br />
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="phone">Phone:</label><br />
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div class="footer">
+      <!-- footer content goes here -->
+    </div>
+  </body>
+</html>

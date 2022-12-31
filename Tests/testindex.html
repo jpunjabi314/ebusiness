@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sunny Meadows B&B</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="sunny-meadows-logo.png" alt="Sunny Meadows logo">
+    <h1>Sunny Meadows Bed & Breakfast</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#attractions">Local Attractions</a></li>
+      <li><a href="#reservations">Reservations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Sunny Meadows B&B</h2>
+      <p>Welcome to Sunny Meadows Bed & Breakfast, a charming and cozy retreat nestled in the heart of the countryside. Our beautiful Victorian-style mansion is surrounded by picturesque gardens and offers the perfect escape from the hustle and bustle of city life.</p>
+    </section>
+    <section id="rooms">
+      <h2>Rooms</h2>
+      <div id="room-list">
+        <!-- Room elements will be added here dynamically using JavaScript -->
+      </div>
+    </section>
+    <section id="amenities">
+      <h2>Amenities</h2>
+      <ul>
+        <li>Complimentary breakfast</li>
+        <li>Free WiFi</li>
+        <li>On-site parking</li>
+        <li>Outdoor pool</li>
+        <li>Bicycle rentals</li>
+      </ul>
+    </section>
+    <section id="attractions">
+      <h2>Local Attractions</h2>
+      <div id="map"></div>
+    </section>
+    <section id="reservations">
+      <h2>Reservations</h2>
+      <form id="reservation-form">
+        <label for="check-in-date">Check-in Date:</label>
+        <input type="date" id="check-in-date" name="check-in-date">
+        <label for="check-out-date">Check-out Date:</label>
+        <input type="date" id="check-out-date" name="check-out-date">
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type">
+          <!-- Room options will be added here dynamically using JavaScript -->
+        </select>
+        <button type="submit">Book Now</button>
+      </form>
+      <div id="booking-confirmation"></div>
+    </section>
+    <section id="contact">
+    <h2>Contact</h2>
+        <p>Phone: 555-555-5555</p>
+        <p>Email: info@sunnymeadowsbb.com</p>
+        <p>Address: 123 Main St, Anytown USA 12345</p>
+    </section>
+    
+      </main>
+      <footer>
+        <p>Copyright Sunny Meadows B&B 2021</p>
+      </footer>
+      <!-- Firebase Realtime Database script -->
+      <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+      <script src="firebase.js"></script>
+      <!-- Map API script -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+      <!-- Custom script -->
+      <script src="script.js"></script>
+    </body>
+    </html>
+    

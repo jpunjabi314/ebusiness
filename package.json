@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jpunjabi314/ebusiness/issues"
   },
-  "homepage": "https://github.com/jpunjabi314/ebusiness#readme"
+  "homepage": "https://github.com/jpunjabi314/ebusiness#readme",
+  "dependencies": {
+    "firebase": "^9.15.0"
+  }
 }
