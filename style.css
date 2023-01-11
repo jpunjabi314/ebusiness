@@ -7,6 +7,7 @@
   body {
     font-family: Arial, sans-serif;
     color: #333;
+    margin: 0;
   }
   
   .header {
@@ -14,23 +15,25 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #eee;
+    /*background-color: #eee;*/
+    background-color: #19288B;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   }
   
   .logo {
-    height: 40px;
+    height: 50px;
   }
   
   nav {
     display: flex;
+    
   }
   
   nav a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #333;
+    color: #eee;
     font-weight: bold;
   }
   
@@ -42,11 +45,48 @@
   
   .main-content {
     padding: 20px;
+    background-color: #dcdcdd;
   }
   
   .footer {
     padding: 20px;
-    background-color: #eee;
+    background-color: #19288B;
     text-align: center;
   }
-  
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
