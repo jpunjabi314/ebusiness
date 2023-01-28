@@ -1,21 +1,28 @@
-// -----Modal Stuff------
+// Get all room images
+let roomImages = document.querySelectorAll('.room-image');
 
-var modal = document.getElementById("myModal");
-        
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
+// Add click event listener to each image
+roomImages.forEach(image => {
+  image.addEventListener('click', function() {
+    // Get the modal corresponding to the clicked image
+    let modalId = this.getAttribute('data-modal');
+    let modal = document.getElementById(modalId);
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Show the modal
+    modal.style.display = 'block';
+  });
+});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+// Get all modal close buttons
+let closeButtons = document.querySelectorAll('.modal-close');
+
+// Add click event listener to each close button
+closeButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Get the parent modal of the close button
+    let modal = this.parentElement;
+
+    // Hide the modal
+    modal.style.display = 'none';
+  });
+});
