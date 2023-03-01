@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Enter Credit Card Information</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" />
     <div class="header">
         <a href="index.html"> 
             <img src="logo.png" alt="Fictional Hotel logo" class="logo" />
@@ -15,11 +16,12 @@
     <header>
       <h1>Enter Credit Card Information</h1>
     </header>
+    <script src="reservation.js"></script>
     <form>
       <fieldset>
         <legend>Billing Information</legend>
-        <label for="name">Name on Card:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="nameCard">Name on Card:</label>
+        <input type="text" id="nameCard" name="nameCard" required>
         <label for="cardNumber">Card Number:</label>
         <input type="text" id="cardNumber" name="cardNumber" required>
         <label for="expiration">Expiration Date:</label>
@@ -27,10 +29,9 @@
         <label for="cvv">CVV:</label>
         <input type="text" id="cvv" name="cvv" required>
       </fieldset>
-      <button type="submit">Submit</button>
+      <input type="submit" value="Send" onclick="storeCardData(event)">
     </form>
   </div>
-    <script src="script.js"></script>
     <div class="footer">
       <!-- footer content goes here -->
     </div>

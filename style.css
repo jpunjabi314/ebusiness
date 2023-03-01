@@ -145,9 +145,9 @@
   cursor: pointer; /* Change the cursor to a pointer */
 }
 
-/* Form elements */
+
 input[type="submit"] {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   color: white;
   padding: 12px 20px;
   border: none;
@@ -161,7 +161,7 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select {
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], input[type="month"], select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;

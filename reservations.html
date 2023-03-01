@@ -22,8 +22,9 @@
     </div>
     <div class="main-content">
       <h1>Reservations</h1>
-      <p>Thank you for choosing the Ocean's Pearl for your stay. To make a reservation, please complete the form below. Payment will be made on sight, and you will receive an email confirmation on completion.</p>
+      <p>Thank you for choosing the Ocean's Pearl for your stay. To make a reservation, please complete the form below. You will receive an email confirmation on completion.</p>
       <br>
+      <script src="reservation.js"></script>
       <form>
         <fieldset>
           <legend>Contact Information</legend>
@@ -44,15 +45,12 @@
           <label for="departure">Departure Date:</label>
           <input type="date" id="departure" name="departure" required>
           <label for="adults">Number of Adults:</label>
-          <input type="number" id="adults" name="adults" min="1" max="4" required>
+          <input type="number" id="adults" name="adults" required>
           <label for="children">Number of Children:</label>
-          <input type="number" id="children" name="children" min="0" max="4" required>
+          <input type="number" id="children" name="children" required>
         </fieldset>
-        <button type="submit">Submit</button>
+        <input type="submit" value="Send" onclick="storeData(event)">
       </form>
-
-
-
      
   
     </div>

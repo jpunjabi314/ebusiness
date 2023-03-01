@@ -1,3 +1,5 @@
+/*
+
 // Get all room images
 let roomImages = document.querySelectorAll('.room-image');
 
@@ -27,3 +29,4 @@ closeButtons.forEach(button => {
   });
 });
 
+*/
