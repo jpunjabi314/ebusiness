@@ -25,29 +25,41 @@
       <p>Thank you for choosing the Ocean's Pearl for your stay. To make a reservation, please complete the form below. Payment will be made on sight, and you will receive an email confirmation on completion.</p>
       <br>
       <form>
-        <label for="arrival-date">Arrival Date:</label><br />
-        <input type="date" id="arrival-date" name="arrival-date" required /><br />
-        <label for="departure-date">Departure Date:</label><br />
-        <input type="date" id="departure-date" name="departure-date" required /><br />
-        <label for="room-type">Room Type:</label><br />
-        <select id="room-type" name="room-type" required>
-          <option value="standard">Standard</option>
-          <option value="deluxe">Deluxe</option>
-          <option value="suite">Suite</option>
-        </select><br />
-        <label for="number-of-guests">Number of Guests:</label><br />
-        <input type="number" id="number-of-guests" name="number-of-guests" min="1" max="4" required /><br />
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" required /><br />
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br />
-        <label for="phone">Phone:</label><br />
-        <input type="tel" id="phone" name="phone" required /><br /><br />
-        <input type="submit" value="Submit" />
+        <fieldset>
+          <legend>Contact Information</legend>
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Reservation Details</legend>
+          <br>
+          <label for="arrival">Arrival Date:</label>
+          <input type="date" id="arrival" name="arrival" required>
+          <label for="departure">Departure Date:</label>
+          <input type="date" id="departure" name="departure" required>
+          <label for="adults">Number of Adults:</label>
+          <input type="number" id="adults" name="adults" min="1" max="4" required>
+          <label for="children">Number of Children:</label>
+          <input type="number" id="children" name="children" min="0" max="4" required>
+        </fieldset>
+        <button type="submit">Submit</button>
       </form>
+
+
+
+     
+  
     </div>
     <div class="footer">
       <!-- footer content goes here -->
     </div>
+
+    
   </body>
 </html>

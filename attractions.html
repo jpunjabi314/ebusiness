@@ -5,6 +5,12 @@
     <script src="script.js"></script>
     <title>Local Attractions - The Ocean's Pearl</title>
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
   </head>
   <body>
     <div class="header">
@@ -32,6 +38,29 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ut leo lacinia aliquet. Donec lacus urna, tincidunt sed iaculis vel, ultricies at est. Fusce commodo pulvinar turpis eu faucibus. Morbi pellentesque, ligula et consequat maximus, nisi ante vestibulum dolor, facilisis lobortis ipsum nunc auctor erat. Aenean lorem nibh, accumsan id tempus in, semper ut nunc. In et cursus ante. Duis eu accumsan justo, sit amet vulputate metus. Curabitur tristique tortor luctus ullamcorper feugiat. Vestibulum ante ipsum primis in.</p>
       <h2>Mini Golf</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ut leo lacinia aliquet. Donec lacus urna, tincidunt sed iaculis vel, ultricies at est. Fusce commodo pulvinar turpis eu faucibus. Morbi pellentesque, ligula et consequat maximus, nisi ante vestibulum dolor, facilisis lobortis ipsum nunc auctor erat. Aenean lorem nibh, accumsan id tempus in, semper ut nunc. In et cursus ante. Duis eu accumsan justo, sit amet vulputate metus. Curabitur tristique tortor luctus ullamcorper feugiat. Vestibulum ante ipsum primis in.</p>
+      <br>
+      <br>
+      <div id="map">
+        <script>
+          // Map Stuff
+
+          var map = L.map('map').setView([39.2776, -74.5746], 13);
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(map);
+
+          //var beach = L.marker([51.5, -0.09]).addTo(map);
+          //var boardwalk = L.marker([51.5, -0.09]).addTo(map);
+          var minigolf = L.marker([39.27625655721504, -74.56877478674615]).addTo(map);
+          minigolf.bindPopup("OC Adventere Golf").openPopup();
+          var castawaycove = L.marker([39.27433260508265, -74.5742984871602]).addTo(map);
+          castawaycove.bindPopup("Castaway Cove").openPopup();
+          var gillians = L.marker([39.27716550105645, -74.56615983338217]).addTo(map);
+          gillians.bindPopup("Gillian's Wonderland Pier").openPopup();
+
+        </script>
+      </div>
     </div>
     <div class="footer">
       <!-- footer content goes here -->
