@@ -11,16 +11,58 @@
         </a>
         </div>
   </head>
-  <body>
-    <div class = "main-content">
-    <header>
-      <h1>CONFIRMED YAYAYAYAYAY!!</h1>
-    </header>   
-  </div>
+  <div>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
     <script src="script.js"></script>
+    
+    <script src="reservation.js"></script>
+  <body onload ="setUpConfirmation()">
+    <div class = "main-content" >
+    <header>
+      <h1>Congratulations! Your booking is complete! <br> Here is the information we received from you: </h1>
+    </header>
+    <br>
+
+    <div id = "setupconfpage">
+    
+        <h3>Booking information: </h3>
+        <p id = "nameDisplay"></p>
+        <p id = "emailDisplay"></p>
+        <p id = "arrivalDisplay"></p>
+        <p id = "departureDisplay"></p>
+        <p id = "guestsDisplay"></p>
+
+        <br>
+
+        <h3>Card Information: </h3>
+        <p id = "nameCardDisplay"></p>
+        <p id = "cardNumberDisplay"></p>
+
+    </div>
+
+    <br>
+    <br>
+
+    <form action="index.html">
+        <input type="submit" value="Home" />
+    </form>
+    
+    
+
+  </div>
+
     <div class="footer">
       <!-- footer content goes here -->
     </div>
   </body>
+</div>
 </html>
 
