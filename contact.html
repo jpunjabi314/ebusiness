@@ -5,29 +5,14 @@
     <script src="script.js"></script>
     <link rel="icon" href="favicon.ico" />
     <title>Contact - The Ocean's Pearl</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('xBsh5-5jkDtC7eOHS');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+    <script src = "contact.js"></script>
   </head>
   <body>
     <div class="header">
@@ -35,17 +20,16 @@
         <img src="logo.png" alt="Fictional Hotel logo" class="logo" />
     </a>
       <nav>
-        <a href="about.html">About Us</a>
         <a href="rooms.html">Rooms</a>
         <a href="attractions.html">Local Attractions</a>
         <a href="reservations.html">Reservations</a>
         <a href="contact.html" class="active">Contact</a>
-        <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
       </nav>
     </div>
     <div class="main-content">
       <h1>Contact</h1>
       <p>For any questions or inquiries, please don't hesitate to contact us. Our dedicated and professional team is always happy to assist with any needs or requests you may have.</p>
+      <br>
       <h2>Contact Information</h2>
       <p>
         The Ocean's Pearl<br />
@@ -68,7 +52,7 @@
         <label for="message">Message:</label><br />
         <textarea id="message" name="message" required></textarea><br /><br />
         <!--<input type="submit" value="Send" />-->
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" onclick="storeData(event)">
       </form>
     </div>
     <div class="footer">
