@@ -6,6 +6,55 @@
     <script src="script.js"></script>
     <link rel="icon" href="favicon.ico" />
     <title>The Ocean's Pearl</title>
+    <style>
+      /* Mobile styles */
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    margin: 0.5rem 0;
+  }
+  
+  .main-content {
+    padding: 2rem;
+  }
+  
+  .container {
+    display: block;
+  }
+  
+  .fill-width {
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+    </style>
   </head>
   <body>
     <div class="header">
@@ -25,9 +74,10 @@
         <div style="position: relative;">
           <img src="img/beach.jpg" alt="Paris" class="fill-width">
           <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-            <h1 style="font-size: 3rem; color: white; margin-bottom: 10rem;">Welcome to the Ocean's Pearl</h1>
-            <a href="reservations.html"><button class="btn" style="font-size: 1.8rem; padding: 0.5rem 1rem;">Book a Reservation</button></a>
-          </div>
+            <h1 style="font-size: 3rem; color: #1b1b1b; margin-bottom: 1rem; margin-top: 0;">Welcome to the Ocean's Pearl</h1>
+            <img src="logo.png" alt="The Ocean's Pearl logo" style="margin-bottom: 2rem;">
+            <a href="reservations.html"><button class="btn" style="font-size: 1.8rem; padding: 0.5rem 1rem; position: absolute; top: 90%;">Book a Reservation</button></a>
+          </div>          
         </div>
       </div>
     </div>
