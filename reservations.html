@@ -57,6 +57,12 @@
           <input type="number" id="adults" name="adults" required>
           <label for="children">Number of Children:</label>
           <input type="number" id="children" name="children" required>
+          <label for="roomType">Room Type:</label>
+          <select type="text" id="roomType" name="roomType">
+            <option value="Standard">Standard</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Suite">Suite</option>
+          </select>          
         </fieldset>
         <input type="submit" value="Send" onclick="storeData(event)">
       </form>

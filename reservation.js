@@ -36,6 +36,7 @@ var nameCard = "";
 var cardNumber = "";
 var expirationDate = "";
 var cvv = "";
+var roomType = "";
 
 
 function storeData(event) {
@@ -49,6 +50,7 @@ function storeData(event) {
     departureInput = document.getElementById("departure").value;
     adultsInput = document.getElementById("adults").value;
     childrenInput = document.getElementById("children").value;
+    roomType = document.getElementById("roomType").value;
 
     localStorage.setItem("nameInput", nameInput);
     localStorage.setItem("emailInput", emailInput);
@@ -57,6 +59,7 @@ function storeData(event) {
     localStorage.setItem("departureInput", departureInput);
     localStorage.setItem("adultsInput", adultsInput);
     localStorage.setItem("childrenInput", childrenInput);
+    localStorage.setItem("roomType", roomType);
 
     console.log(nameInput.value);
 
@@ -116,6 +119,7 @@ function storeCardData(event) {
     departureInput = localStorage.getItem("departureInput");
     adultsInput = localStorage.getItem("adultsInput");
     childrenInput = localStorage.getItem("childrenInput");
+    roomType = localStorage.getItem("roomType");
 
         
 
@@ -207,7 +211,8 @@ function writeUserData() {
         nameOnCard: nameCard,
         numberOnCard: cardNumber,
         cardExpirationDate: expirationDate,
-        cardCVV: cvv
+        cardCVV: cvv,
+        roomType : roomType
     });
 }
 
@@ -219,6 +224,7 @@ function retrieveAllData() {
     departureInput = localStorage.getItem("departureInput");
     adultsInput = localStorage.getItem("adultsInput");
     childrenInput = localStorage.getItem("childrenInput");
+    roomType = localStorage.getItem("roomType");
 
     nameCard = localStorage.getItem("nameCard"); 
     cardNumber = localStorage.getItem("cardNumber");
@@ -235,6 +241,7 @@ function setUpConfirmation() {
     document.getElementById("emailDisplay").innerHTML = "Email: " + emailInput;
     document.getElementById("arrivalDisplay").innerHTML = "Arrival Date: " + arrivalInput;
     document.getElementById("departureDisplay").innerHTML = "Departure Date: " + departureInput;
+    document.getElementById("roomTypeDisplay").innerHTML = "Room Type: " + roomType;
     document.getElementById("guestsDisplay").innerHTML = "Guests: " + (parseInt(adultsInput) + parseInt(childrenInput)).toString();
     document.getElementById("nameCardDisplay").innerHTML = "Name on Card: " + nameCard;
     document.getElementById("cardNumberDisplay").innerHTML = "Card Number: " + "**** **** **** " + cardNumber.slice(-4);
